@@ -9,7 +9,7 @@ import com.app.enrollment.dto.TrainingReqDto;
 
 public interface EnrollmentService {
 	
-public String addTraining (TrainingReqDto trainingReqDto);
+public String addTraining (Integer courseId,TrainingReqDto trainingReqDto);
 
 public String enrollTraining (EnrollmentReqDto enrollmentReqDto);
 

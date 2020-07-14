@@ -2,24 +2,20 @@ package com.app.enrollment.dto;
 
 import java.util.Date;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class TrainingReqDto {
-	private Integer courseId;
+	private String courseName;
 	private String batchName;
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	@JsonFormat
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date startDate;
-	@JsonFormat
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date endDate;
-	public Integer getCourseId() {
-		return courseId;
+	public String getCourseName() {
+		return courseName;
 	}
-	public void setCourseId(Integer courseId) {
-		this.courseId = courseId;
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
 	public String getBatchName() {
 		return batchName;

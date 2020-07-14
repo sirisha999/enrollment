@@ -2,9 +2,6 @@ package com.app.enrollment.clients;
 
 public class EmployeeDto {
 	
-	public EmployeeDto(){
-		
-	}
 	private Integer id;
 
 	private String employeeName;

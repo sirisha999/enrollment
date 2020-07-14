@@ -1,6 +1,7 @@
 package com.app.enrollment.dto;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,7 +13,7 @@ public class ListAllDto {
 	private Date startDate;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date endDate;
-	private Integer employeeId;
+	private  List<Integer> empIds;
 	public Integer getTrainingId() {
 		return trainingId;
 	}
@@ -43,10 +44,10 @@ public class ListAllDto {
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
-	public Integer getEmployeeId() {
-		return employeeId;
+	public List<Integer> getEmployeeId() {
+		return empIds;
 	}
-	public void setEmployeeId(Integer employeeId) {
-		this.employeeId = employeeId;
+	public void setEmployeeId(List<Integer> empIds) {
+		this.empIds = empIds;
 	}
 }

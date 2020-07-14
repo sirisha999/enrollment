@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 import com.app.enrollment.model.Training;
 @Repository
 public interface TrainingRepository extends JpaRepository<Training,Integer>{
-public List<Training> findByCourseId(Integer id);
+public List<Training> findByCourseIdOrderByBatchName(Integer id);
 }

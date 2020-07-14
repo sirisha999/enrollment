@@ -1,13 +1,15 @@
 package com.app.enrollment.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Training {
 	@Id
@@ -17,9 +19,12 @@ public class Training {
 	private String batchName;
 
 	
-	  @DateTimeFormat(pattern = "dd/MM/yyyy") private Date startDate;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	  private Date startDate;
 	  
-	  @DateTimeFormat(pattern = "dd/MM/yyyy") private Date endDate;
+	 // @DateTimeFormat(pattern = "dd/MM/yyyy") 
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	  private Date endDate;
 	 
 	public Integer getTrainingId() {
 		return trainingId;
