@@ -80,16 +80,6 @@ public class EnrollmentControllerTest {
 		
 	}
 	
-	@GetMapping("/search/{courseName}")
-	public TrainingResponseDto searchTrainings(@PathVariable String courseName){
-		TrainingResponseDto dto=new TrainingResponseDto();
-		CourseResponseDto courseDto=employeeClient.getCourseByName(courseName);
-		List<TrainingDto> dtos=enrollmentService.searchTrainings(courseDto.getCourseDto().getCourseName(),courseDto.getCourseDto().getCourseId());
-		dto.setTrainingDto(dtos);
-		dto.setResponseCode(200);
-		dto.setResponseMessage("search success");
-		return dto;
-	}
 }
 
 
